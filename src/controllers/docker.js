@@ -387,6 +387,7 @@ class Docker {
                         Memory: this.hardlimit(config.memory) * 1000 * 1000,
                         MemoryReservation: config.memory * 1000 * 1000,
                         MemorySwap: swapSpace,
+                        Privileged: true,
                         BlkioWeight: config.io,
                         Dns: Config.get('docker.dns', [
                             '8.8.8.8',
